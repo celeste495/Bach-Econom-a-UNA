@@ -11,12 +11,36 @@ h1 {
   margin-bottom: 2rem;
 }
 
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 #grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.semester h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #007acc;
+}
+
+.courses {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .course {
@@ -28,6 +52,7 @@ h1 {
   transition: 0.3s;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
+  font-weight: bold;
 }
 
 .course.locked {
@@ -37,10 +62,13 @@ h1 {
   cursor: not-allowed;
 }
 
-.course.approved {
-  background: #c8e6c9;
-  border-color: #66bb6a;
-  color: #2e7d32;
-  font-weight: bold;
+.course.available {
+  background: #e3f2fd; /* celeste claro */
+  color: #1565c0; /* azul medio */
 }
 
+.course.approved {
+  background: #e1bee7; /* lila */
+  border-color: #9c27b0;
+  color: #6a1b9a; /* morado */
+}
