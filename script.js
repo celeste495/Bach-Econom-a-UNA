@@ -97,16 +97,4 @@ function renderCourses() {
   }
 }
 
-function downloadPDF() {
-  const element = document.getElementById(\"grid\");
-  const opt = {
-    margin:       0.3,
-    filename:     'Plan_Estudio_Economia_UNA.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(element).save();
-}
-
 renderCourses();
