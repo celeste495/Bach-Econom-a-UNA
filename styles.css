@@ -50,13 +50,13 @@ h1 {
   cursor: not-allowed;
 }
 
-.course.available {
-  background: #e3f2fd; /* celeste claro */
-  color: #1565c0; /* azul medio */
+.course:not(.locked):not(.approved) {
+  background: #e3f2fd;
+  color: #1565c0;
 }
 
 .course.approved {
-  background: #e1bee7; /* lila */
+  background: #e1bee7;
   border-color: #9c27b0;
-  color: #6a1b9a; /* morado */
+  color: #6a1b9a;
 }
